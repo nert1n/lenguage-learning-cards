@@ -1,0 +1,9 @@
+.git/
+.gitignore
+.idea/                
+.dockerignore
+Dockerfile
+.mvn/         # Installed inside container
+target/ 
+mvnw
+mvnw.cmd

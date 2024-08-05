@@ -1,0 +1,24 @@
+.container {
+	@apply flex flex-col gap-2 items-center justify-center w-full max-w-400;
+	max-width: clamp(240px, 65vw, 400px);
+}
+
+.forgot {
+	@apply self-start;
+}
+
+.under-btn-text {
+	@apply flex gap-1 flex-row;
+}
+
+.auth__input {
+	&.error {
+		border-color: #ff5959;
+
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: #ff8e8e;
+		}
+	}
+}

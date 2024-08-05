@@ -1,0 +1,23 @@
+.container {
+	@apply flex flex-col gap-3 items-center justify-center w-full;
+	max-width: clamp(240px, 65vw, 400px);
+	gap: clamp(5px, 2vw, 12px);
+}
+
+.input {
+	@apply w-full max-w-400;
+
+	&.error {
+		border-color: #ff5959;
+
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: #ff8e8e;
+		}
+	}
+}
+
+.under-btn-text {
+	@apply flex gap-1 flex-row;
+}
