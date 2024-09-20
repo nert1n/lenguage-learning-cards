@@ -3,6 +3,9 @@ import { Outlet } from "react-router-dom";
 
 import { Loader } from "@shared/lib/ui/components/loader";
 
+import { AuthLayout } from "./auth-layout";
+import { MainLayout } from "./main-layout";
+
 const Layout = () => {
 	return (
 		<main>
@@ -13,4 +16,4 @@ const Layout = () => {
 	);
 };
 
-export default Layout;
+export { Layout, AuthLayout, MainLayout };

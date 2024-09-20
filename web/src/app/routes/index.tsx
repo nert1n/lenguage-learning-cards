@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { Loader } from "@shared/lib/ui/components/loader";
 
-import { routes } from "./router";
+import { routes } from "./router.tsx";
 
 const router = createBrowserRouter(routes);
 

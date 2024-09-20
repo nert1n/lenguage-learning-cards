@@ -10,7 +10,7 @@ import sitemap from "vite-plugin-sitemap";
 export default defineConfig({
 	plugins: [
 		react(),
-		sitemap({ hostname: "https://LLC.com" }),
+		sitemap({ hostname: "https://lenguage-learning-cards-vite.vercel.app/" }),
 		compression({ algorithm: "gzip" }),
 		legacy({ targets: ["defaults", "not IE 11"] }),
 		VitePWA({
@@ -39,6 +39,18 @@ export default defineConfig({
 			"@entities": path.resolve(__dirname, "./src/entities"),
 			"@shared": path.resolve(__dirname, "./src/shared"),
 		},
+	},
+	server: {
+		port: 3000,
+		proxy: {
+			api: {
+				target: "http://localhost:8080",
+				changeOrigin: true,
+				secure: true,
+				cookieDomainRewrite: "localhost",
+			},
+		},
+		hmr: { overlay: true },
 	},
 	optimizeDeps: { include: ["react", "react-dom"] },
 	build: {
